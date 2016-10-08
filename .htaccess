@@ -1,0 +1,2 @@
+AuthName "REG"
+AuthUserFile "/home1/iitgmhnn/.htpasswds/public_html/alcheringa.in/registrations/passwd"

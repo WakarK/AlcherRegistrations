@@ -1,0 +1,604 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	outline: 0;
+}
+body{
+	width: 100%;
+	background: url('background.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-size: 13px;
+	color: #333;
+	background-attachment: fixed;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+i {
+    margin-right: 7px;
+}
+.red{
+	color: #E40000 !important;
+}
+.green{
+	color: #338004 !important;
+}
+#header_bar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 10px 0;
+	height: 20px;
+	background: rgb(228, 197, 19);
+	z-index: 2;
+}	
+#header_container{
+	width: 1020px;
+	margin: auto;
+}
+#header_logo{
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+}
+#header_logo img{
+	width: 100px;
+	position: relative;
+	bottom: 4px;
+}
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    border-radius: 3px;
+    padding: 3px;
+    border: 1px solid #bbb;
+}
+.header_bar_button{
+	margin: 0 10px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+}
+.header_bar_button span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	color: #ED6D06;
+	line-height: 1.5;
+	border-radius: 8px;
+	font-size: 11px;
+	background: white;
+	position: relative;
+	bottom: 5px;
+}
+.header_bar_button .user_account_pic{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	float: left;
+	margin-right: 5px;
+	position: relative;
+	bottom: 2px;
+} 
+.header_bar_button .bell_icon{
+	width: 20px;
+	height: 20px;
+	
+}
+#big_container {
+    padding: 50px 0 20px 0;
+    width: 1020px;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    margin-top: 20px;
+}
+#big_container.push_below{
+	margin-top: 110px;
+}
+#phone_box_container{
+	position: fixed;
+	top: 40px;
+	padding-top: 20px;
+	padding-bottom: 8px;
+	width: 983px;
+	z-index: 10;
+	background: #f3f3f3;
+}
+#phone_prompt_box{
+	text-align: center;
+	position: relative;
+	width: 100%;
+}
+#phone_prompt_box form{
+	margin-top: 10px;
+}
+#phone_prompt_box form input[type="text"]{
+	border: 0;
+	border-bottom: 1px solid #bbb;
+	border-radius: 0;
+	margin-right: 5px;
+}
+#phone_prompt_box form input[name="college_name"], #phone_prompt_box form input[name="team_name"]{
+	width: 220px;
+}
+#phone_prompt_box form .solid_button{
+	padding: 4px 15px;
+}
+#header_dropdown{
+	float: right;
+	position: relative;
+}
+#header_bar .right_dropdown{
+	margin-top: 10px;
+}
+#header_dropdown_block input[type="submit"]{
+	background: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+}
+#notif_dropdown{
+	float: right;
+	position: relative;
+}
+#notif_dropdown_block{
+	width: 300px;
+	white-space: normal
+}	
+#requests_button{
+	float: right;
+}
+#home_header_button{
+	float: right;
+}
+.right_dropdown{
+	background: white;
+	position: absolute;
+	right: -3px;
+	white-space: nowrap;
+	padding: 10px 0;
+	z-index: 10;
+	margin-top: 5px;
+	border-radius: 3px;
+	box-shadow: 0 2px 40px rgba(0,0,0,.4);
+	border: 1px solid rgba(0,0,0,.2);
+}
+.right_dropdown div{
+	padding: 5px 15px;
+	cursor: pointer;
+}
+.right_dropdown div:hover{
+	background: #1fa67a;
+	color: white;
+}
+#big_block{
+	margin-top: 40px;
+}
+#left_section{
+	height: 100%;
+	width: 200px;
+	background: #666;
+	position: fixed;
+	left: 0;
+	color: white;
+	float: left;
+}
+#left_section div{
+	padding: 20px;
+	border-bottom: 1px solid #aaa;
+	cursor: pointer;
+}
+#big_login_container{
+	background: rgba(255,255,255,0.8);
+	background: #f4f4f4;
+	border-radius: 3px;
+	border: 1px solid #eee;
+	padding: 20px;
+	width: 420px;
+	margin-left: 300px;
+	margin-top: 50px;
+}
+#log_in_section{
+	margin-bottom: 12px;
+	line-height: 2;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 12px;
+}
+#log_in_section input[type="email"], #log_in_section input[type="password"]{
+	padding: 4px;
+	margin-right: 4px;
+	width: 165px;
+}
+#log_in_section .solid_button{
+	padding: 5px 6px;
+}
+#forgot_password a:hover{
+	text-decoration: underline;
+}
+#fb_connect{
+	width: 100%;
+	background: #3a5795;
+	padding: 15px 0px;
+	border: 0;
+	color: white;
+	font-size: 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#sign_up_section{
+	line-height: 2;
+}
+#sign_up_section input, #sign_up_section select{
+	margin-right: 4px;
+	padding: 4px;
+	margin-bottom: 4px;
+}
+#sign_up_section input[type="radio"]{
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+#sign_up_section .solid_button{
+	padding: 5px 15px;
+	float: right;
+}
+#sign_up_label{
+	text-align: center;
+}
+#email_sign_up{
+	cursor: pointer;
+	font-size: 14px;
+}
+#email_sign_up:hover{
+	text-decoration: underline;
+}
+
+#login_header_bar{
+	width:1100px;
+	height: 70px;
+	position: fixed;
+	top: 20px;
+}
+#login_header_bar img{
+	width: 50px;
+	margin-left: 50px;
+}
+#login_header_bar span{
+	color: black;
+	font-size: 16px;
+	cursor: pointer;
+}
+#login_header_bar button {
+    background: transparent;
+	color: black;
+    border: 0;
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+#free_trial_message {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #1fa67a;
+    font-weight: 500;
+}
+#header_logo{
+	color: white;
+	font-size: 14px;
+}
+.solid_button{
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid #1fa67a;
+    background: #1fa67a;
+    color: white;
+    cursor: pointer;
+}
+.outline_button{
+	padding: 3px;
+	border-radius: 2px;
+	border: 1px solid #1fa67a;
+	color: #1fa67a;
+	background: transparent;
+	cursor: pointer;
+}
+#sign_up_section .solid_button {
+    padding: 5px 15px;
+    float: right;
+}
+#sign_up_section input, #sign_up_section select {
+    margin-right: 4px;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+#left_panel_block {
+    float: left;
+    width: 180px;
+    height: 100%;
+    padding: 5px;
+}
+#left_panel {
+    position: fixed;
+    width: 180px;
+    line-height: 25px;
+}
+#left_panel div {
+    padding-left: 5px;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+#right_panel_block {
+    float: right;
+    padding: 5px;
+    width: 250px;
+    height: 100%;
+}
+#right_panel {
+    position: fixed;
+    width: 250px;
+    overflow-y: auto;
+}
+#right_panel_footer {
+    color: #777;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+#right_panel_footer a:hover{
+	text-decoration: underline;
+}
+#right_panel_footer * {
+    color: #777;
+}
+.right_title{
+	color: #555;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.common_white_block {
+    background: white;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+	line-height: 1.4;
+	color: #444;
+}
+.common_block{
+    padding: 5px 15px;
+    margin-bottom: 10px;
+	line-height: 1.4;
+	color: #444;
+}
+
+#main_block {
+    position: absolute;
+    left: 200px;
+    width: 550px;
+    padding: 5px;
+    margin-top: 0;
+	background: #f3f3f3;
+}
+.message {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+}
+.team_mem_block span{
+	color: #555;
+	font-weight: bold;
+	font-size: 13px;
+}
+.team_mem_block span.alcher_id{
+	float: right;
+	font-weight: normal;
+	color: #999;
+	font-size: 13px;
+}
+.add_mem_block .add_mem_button{
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+}
+
+#add_mem_dropdown .solid_button{
+	padding: 4px 15px;
+	float: right;
+}
+#add_mem_dropdown input[type="text"], #add_mem_dropdown input[type="email"]{
+	border: 0;
+	border-bottom: 1px solid #bbb;
+	width: 150px;
+	margin-right: 10px;
+	border-radius: 0;
+	margin-bottom: 5px;
+}
+#add_mem_dropdown input[type="email"]{
+	width: 150px;
+}
+#add_mem_dropdown select{
+	border: 0;
+	width: 75px;
+	padding: 2px;
+	margin-right: 10px;
+	border-bottom: 1px solid #aaa;
+}
+.competitions_block{
+	padding: 20px;
+	margin:0;
+	border-bottom-width: 1px;
+	border-radius: 0;
+}
+.comp_display_name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comp_mod_name{
+	float: right;
+	color: #777;
+}
+.comp_details{
+	padding-top: 5px;
+	color: #777;
+}
+.competitions_block .solid_button, .competitions_block .outline_button, .registrations_block .solid_button, .registrations_block .outline_button{
+	float: right;
+	margin-left: 10px;
+	padding: 5px 15px;
+}
+.comp_rules{
+	display: none;
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	padding-top: 10px;
+	color: #777;
+}
+.comp_register{
+	display: none;
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	padding-top: 10px;
+}
+.comp_register .comp_reg_user{
+	width: 50%;
+	float: left;
+}
+.comp_register .common_block{
+	padding: 0;
+}
+.comp_reg_user input[type="checkbox"]{
+	margin-right: 10px;
+}
+.comp_register form .solid_button{
+	float: none;
+	margin: 0;
+	margin-top: 10px;
+}
+.clear_both{
+	clear: both;
+}
+.module_list_block{
+	text-align: center;
+	padding-top: 0;
+}
+.module_list_block select{
+	padding: 7px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.registrations_block{
+	padding: 20px;
+}
+.reg_mem_list{
+	margin-top: 20px;
+	border-top: 1px solid #eee;
+	padding-top: 10px
+}
+.reg_mem_list span{
+	width: 50%;
+	float: left;
+	color: #777;
+}
+.user_display_pic {
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.user_display_name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+}
+.user_account_details {
+    color: #555;
+    margin: 5px 0;
+}
+#team_summary .count_bar{
+	padding: 2px;
+	padding-left: 15px;
+	color: #777;
+	font-size: 12px;
+}
+#team_summary .count_bar span{
+	float: right;
+}
+#leader_text{
+	color: #999;
+	font-weight: normal;
+}
+
+
+[data-tooltip] {
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	width: auto;
+	white-space: nowrap;
+	margin-bottom: 5px;
+	margin-left: -20px;
+	padding: 4px 7px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius:    2px;
+	border-radius:         2px;
+	background-color: #000;
+	background-color: hsla(0, 0%, 20%, 0.9);
+	color: #fff;
+	content: attr(data-tooltip);
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.2;
+}
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	border-top: 5px solid #000;
+	border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: " ";
+	font-size: 0;
+	line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
