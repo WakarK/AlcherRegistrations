@@ -4,7 +4,7 @@ class DB{
 	private $dbHost     = "localhost";
 	private $dbUsername = "root";
 	private $dbPassword = "";
-	private $dbName     = "registrations";
+	private $dbName     = "alcher_reg";
 	
 	public function __construct(){
 		if(!isset($this->db)){
@@ -18,7 +18,7 @@ class DB{
 		}
 	}
 	
-	public function getRows($table,$conditions = array()){
+	public function getRows($table,$conditions = array()){//generic row selection
 		$sql = 'SELECT ';
 		$sql .= array_key_exists("select",$conditions)?$conditions['select']:'*';
 		$sql .= ' FROM '.$table;
@@ -65,7 +65,7 @@ class DB{
 		return !empty($data)?$data:false;
 	}
 	
-	public function insert($table,$data){
+	public function insert($table,$data){//generic data insertion
 		if(!empty($data) && is_array($data)){
 			$columns = '';
 			$values  = '';
@@ -90,7 +90,7 @@ class DB{
 		}
 	}
 	
-	public function update($table,$data,$conditions){
+	public function update($table,$data,$conditions){//generic data update
 		if(!empty($data) && is_array($data)){
 			$colvalSet = '';
 			$whereSql = '';
@@ -118,7 +118,7 @@ class DB{
 		}
 	}
 	
-	public function delete($table,$conditions){
+	public function delete($table,$conditions){//generic row deletion
 		$whereSql = '';
 		if(!empty($conditions)&& is_array($conditions)){
 			$whereSql .= ' WHERE ';

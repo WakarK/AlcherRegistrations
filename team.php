@@ -8,10 +8,18 @@ echo '<div id="main_block">';
 	
 
 
-		echo '<div class="common_white_block">
+		/*echo '<div class="common_white_block">
 		<i class="fa fa-info-circle"></i>Add all team members coming to Alcheringa from your college. You can then register your team members in one or more solo/group competitions. 
 		<b>Add 15 or more members to be eligible for General Championship.</b>
 		</div>
+		<div class="message">Showing all team members</div>
+		
+		<div class="common_white_block team_mem_block">
+			<span>'.$_SESSION['user_name'].'</span>
+			<span class="alcher_id">ALCHER-'.($_SESSION['user_id']+1000).'</span>
+		</div>
+		';*/
+		echo '
 		<div class="message">Showing all team members</div>
 		
 		<div class="common_white_block team_mem_block">
@@ -43,28 +51,35 @@ function userAction(type,id){
     id = (typeof id == "undefined")?'':id;
     var statusArr = {add:"added",edit:"updated",delete:"deleted"};
     var userData = '';
+	var phone='';
     if (type == 'add') {
         userData = $("#addForm").find('.form').serialize()+'&action_type='+type+'&id='+id;
+		phone=$("#phone").val();
     }else if (type == 'edit'){
         userData = $("#editForm").find('.form').serialize()+'&action_type='+type;
+		phone=$("#phoneEdit").val();
     }else{
         userData = 'action_type='+type+'&id='+id;
     }
-    $.ajax({
-        type: 'POST',
-        url: 'userAction.php',
-        data: userData,
-        success:function(msg){
-            if(msg == 'ok'){
-                alert('User data has been '+statusArr[type]+' successfully.');
-                getUsers();
-                $('.form')[0].reset();
-                $('.formData').slideUp();
-            }else{
-                alert('Some problem occurred, please try again.');
-            }
-        }
-    });
+	if(phone=='' && (type=='add' || type=='edit')){
+		alert("Enter phone number.");
+	}else{
+		$.ajax({
+			type: 'POST',
+			url: 'userAction.php',
+			data: userData,
+			success:function(msg){
+				if(msg == 'ok'){
+					alert('User data has been '+statusArr[type]+' successfully.');
+					getUsers();
+					$('.form')[0].reset();
+					$('.formData').slideUp();
+				}else{
+					alert('Some problem occurred, please try again.');
+				}
+			}
+		});
+	}   
 }
 function editUser(id){
     $.ajax({
@@ -84,11 +99,7 @@ function editUser(id){
     });
 }
 </script>
-		<div class="common_white_block">
-		<i class="fa fa-info-circle"></i>Add all team members coming to Alcheringa from your college. You can then register your team members in one or more solo/group competitions. 
-		<b>Add 15 or more members to be eligible for General Championship.</b>
-	</div>
-	<div class="message">Showing all team members</div>
+		
 		<div class="panel panel-default users-content">
             <div class="panel-heading">Team Members <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();"></a></div>
             <div class="panel-body none formData" id="addForm">
@@ -107,8 +118,8 @@ function editUser(id){
                         <input type="text" class="form-control" name="email" id="email"/>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" name="phone" id="phone"/>
+                        <label>Phone<span style="color:red;padding:5px">mandatory</span></label>
+                        <input type="text" class="form-control" name="phone" id="phone" />
                     </div>
 					<div class="form-group">
 						<label>Gender</label>
@@ -137,8 +148,8 @@ function editUser(id){
                         <input type="text" class="form-control" name="email" id="emailEdit"/>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" name="phone" id="phoneEdit"/>
+                        <label>Phone<span style="color:red;padding:5px;">(mandatory)</span></label>
+                        <input type="text" class="form-control" name="phone" id="phoneEdit" />
                     </div>
 					<div class="form-group">
 						<label>Gender</label>

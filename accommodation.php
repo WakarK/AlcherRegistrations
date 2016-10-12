@@ -5,7 +5,7 @@ include 'left_panel.php';
 echo '<div id="main_block">
 	<div class="common_white_block">
 		1. All accommodation will be done in various hostels of IITG, information of which will be given to you at the time of registration.<br>
-		2. Accommodation charges applicable per person are as follows: A minimum of Rs. 600 will be charged for 4 days starting from 28th Jan 2016-31st Jan 2016. An additional amount of Rs. 200 will be charged per day after the 4 days.<br>
+		2. Accommodation charges applicable per person are as follows: A minimum of Rs. 600 will be charged for 4 days starting from 2nd Feb 2017-5th Feb 2017. An additional amount of Rs. 200 will be charged per day after the 4 days.<br>
 		<strong>NOTE:</strong> You will be charged the same amount if you reach before 28th Jan.<br>
 		3. Participants may be asked to deposit a security amount of Rs.100 which will be reimbursed on the last day only if there is no reported loss to the property of IIT Guwahati during your stay by any member of your college.<br>
 		4. We suggest you to bring your basic requirements (like toothbrush, bed sheet, blankets etc.) for your stay in IITG.<br>

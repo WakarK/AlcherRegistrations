@@ -15,6 +15,17 @@
 				        z-index: 9999;
 				        background: url(http://alcheringa.in/images/Preloader_3.gif) center no-repeat #fff;
 		    }
+		    .logo{
+		    	   /*background: url(http://www.alcheringa.in/images/registration_logo.png) no-repeat center center fixed; 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;*/
+			  width:350px;
+			  height:150px;
+			  margin: 0px auto;
+   			  position: relative;
+		    }
 		</style>
 		<script>
 			//paste this code under head tag or in a seperate js file.
@@ -33,7 +44,7 @@
 	margin-left: 46% !important;
 	}
 </style>
-<div class="se-pre-con"></div>
+<!--div class="se-pre-con"></div>
 			<nav id="topNav">
 			<div>
 				<ul class="navleft" style="list-style: outside none none;">
@@ -72,7 +83,11 @@
 					</li>
 				</ul>
 			</div>
-			</nav>
+			</nav-->
+<div class="logo">
+	<a href="http://www.alcheringa.in">
+	<img src="http://www.alcheringa.in/images/registration_logo.png" style="width:100%;"></a>
+</div>
 <?php
 include 'header.php';
 echo '<style type="text/css">

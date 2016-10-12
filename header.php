@@ -32,10 +32,12 @@ echo '
 
 </head>
 <body>
-<div id="header_bar" style="height:40px;">
+<div id="header_bar" style="height:57px;">
 <div id="header_container" style="text-align: center;">
 	<a href="index.php"><div id="header_logo" style="text-align:left;width:50px;margin-top:12px;color:black">Home</div></a>
-	<a href="http://alcheringa.in"><img style="width:14%;" src="http://www.alcheringa.in/images/alchertag1.png"></a>
+	<a href="http://alcheringa.in">
+	<img src="http://www.alcheringa.in/images/alcher%20lady.png" style="width: 4%;">
+	<img style="width:22%;" src="http://www.alcheringa.in/images/alcheringa%20white.png"></a>
 ';
 
 if(user_login_status()==1){
