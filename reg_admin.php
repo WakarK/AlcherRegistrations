@@ -12,7 +12,9 @@ include 'admin_logout.php';
 			<tr id="table_headings">
 			<td>COMPETITION</td>
 			<td>TEAM-ID</td>
-			<td>MEMBERS</td>;
+			<td>MEMBERS</td>
+			<td>NAMES</td>
+			<td>PHONE NUMBERS</td>;
 			</tr>';
 			
 			$query= "SELECT * FROM `registrations` LEFT JOIN `competitions` ON `registrations`.`comp_id`= `competitions`.`index` ORDER BY `competitions`.`name`"; //default query
@@ -29,11 +31,35 @@ include 'admin_logout.php';
 					$members[$i]= 'ALCHER-'.(1000+$members[$i]);
 				}
 				$mem_list= implode("<br> " ,$members);
+				$members=explode(",",$query_row['members']);
 				echo'
 				<tr>
 					<td>'.$query_row['name'].'</td>
 					<td><a href="users_admin.php?team_id='.$query_row['team_id'].'" target="_blank">TEAM-'.(1000+$query_row['team_id']).'</a></td>
 					<td>'.$mem_list.'</td>
+					<td>';
+					for($i=0;$i<sizeof($members);$i++){
+						
+						$query_users = "SELECT * FROM `users` WHERE `index`='".$members[$i]."'";
+						if($query_users_run=mysql_query($query_users)){
+							while($query_users_row=mysql_fetch_assoc($query_users_run)){
+								echo $query_users_row['first_name'].' '.$query_users_row['last_name'];
+								echo '<br>';
+							}
+						}
+					}
+					echo '</td>
+					<td>';
+					for($i=0;$i<sizeof($members);$i++){
+						$query_users = "SELECT * FROM `users` WHERE `index`='".$members[$i]."'";
+						if($query_users_run=mysql_query($query_users)){
+							while($query_users_row=mysql_fetch_assoc($query_users_run)){
+								echo $query_users_row['phone'];
+								echo '<br>';
+							}
+						}
+					}
+					echo '</td>
 					</tr>';
 			}
 			
